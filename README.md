@@ -4,6 +4,7 @@ Have tested on centos7 with 2080ti;
 
 NOTE: You need change CMakeList.txt.
 the repository is forked from https://github.com/ChenYingpeng/caffe-yolov3 
+I have modified some places, you can reference the file of make_method_by_laymu.txt.
 thanks ChenYingpeng!
 
 # Install
