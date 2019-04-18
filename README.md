@@ -1,13 +1,15 @@
 # caffe-yolov3
 # Paltform
-Have tested on Ubuntu16.04LTS with Jetson-TX2 and Ubuntu16.04LTS with gtx1060;
+Have tested on centos7 with 2080ti;
 
-NOTE: You need change CMakeList.txt on Ubuntu16.04LTS with GTX1060.
+NOTE: You need change CMakeList.txt.
+the repository is forked from https://github.com/ChenYingpeng/caffe-yolov3 
+thanks ChenYingpeng!
 
 # Install
-git clone https://github.com/ChenYingpeng/caffe-yolov3
+git clone https://github.com/passion3394/darknet2caffe_yolov3
 
-cd caffe-yolov3
+cd darknet2caffe_yolov3
 
 mkdir build
 
@@ -21,19 +23,19 @@ make -j6
 
 Example 1: yolov3
 
-$ ./x86_64/bin/detectnet 0 ../../data/yolov3/prototxt/yolov3.prototxt ../../data/yolov3/caffemodel/yolov3.caffemodel
+$ ./x86_64/bin/detectnet 0 ../../data/yolov3/prototxt/yolov3.prototxt ../../data/yolov3/caffemodel/yolov3.caffemodel img_path
 
 Example 2: yolov3-spp
 
-$ ./x86_64/bin/detectnet 0 ../../data/yolov3/prototxt/yolov3-spp.prototxt ../../data/yolov3/caffemodel/yolov3-spp.caffemodel 
+$ ./x86_64/bin/detectnet 0 ../../data/yolov3/prototxt/yolov3-spp.prototxt ../../data/yolov3/caffemodel/yolov3-spp.caffemodel img_path 
 
 Example 3: mobilenet_v1 + yolov3
 
-$ ./x86_64/bin/detectnet 0 ../../data/yolov3/prototxt/mobilenet_v1_yolov3.prototxt ../../data/yolov3/caffemodel/mobilenet_v1_yolov3.caffemodel 
+$ ./x86_64/bin/detectnet 0 ../../data/yolov3/prototxt/mobilenet_v1_yolov3.prototxt ../../data/yolov3/caffemodel/mobilenet_v1_yolov3.caffemodel img_path
 
 Example 4:yolov3-tiny
 
-$ ./x86_64/bin/detectnet 1 ../../data/yolov3/prototxt/yolov3-tiny-1.prototxt ../../data/yolov3/prototxt/yolov3-tiny-2.prototxt ../../data/yolov3/caffemodel/yolov3-tiny.caffemodel 
+$ ./x86_64/bin/detectnet 1 ../../data/yolov3/prototxt/yolov3-tiny-1.prototxt ../../data/yolov3/prototxt/yolov3-tiny-2.prototxt ../../data/yolov3/caffemodel/yolov3-tiny.caffemodel img_path
 
 # Download Model
 
