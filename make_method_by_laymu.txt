@@ -1,0 +1,39 @@
+1 
+-gencode arch=compute_75,code=[sm_75,compute_75]
+
+
+2
+/home/hs/software/caffe/include 
+/home/hs/software/caffe/.build_release/src
+/usr/include/openblas/
+
+
+3
+/home/hs/software/caffe/.build_release/lib/libcaffe.so
+/usr/lib64/libglog.so
+/usr/lib64/libgflags.so
+/usr/lib64/libgflags.so.2.1
+/usr/lib64/boost/lib/libboost_system.so
+/root/anaconda3/envs/venv/lib/libstdc++.so.6
+/usr/lib64/libtiff.so
+
+4
+cmake .. -DCUDA_PROPAGATE_HOST_FLAGS=OFF
+
+5
+make
+
+6
+修改yolo_layer.cpp中以下点：
+height
+width
+classes
+anchors
+
+7
+修改
+detectnet.cpp的237行为：
+for(j=0;j<2;++j){
+
+8
+./x86_64/bin/detectnet 0 ../../pytorch-caffe-darknet-convert/yolov3.prototxt ../../pytorch-caffe-darknet-convert/yolov3.caffemodel 图片名称
