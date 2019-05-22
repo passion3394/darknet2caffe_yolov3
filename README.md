@@ -38,6 +38,8 @@ Example 4:yolov3-tiny
 
 $ ./x86_64/bin/detectnet 1 ../../data/yolov3/prototxt/yolov3-tiny-1.prototxt ../../data/yolov3/prototxt/yolov3-tiny-2.prototxt ../../data/yolov3/caffemodel/yolov3-tiny.caffemodel img_path
 
+I Warn All The Users Who Want To Use Converted Yolov3-Tiny Caffemodel From Darknet, That Caffemodel May Have Incorrect Testing Result. The Conclusion Comes From My Experiments.
+
 # Download Model
 
 Baidu link [model](https://pan.baidu.com/s/1yiCrnmsOm0hbweJBiiUScQ)
