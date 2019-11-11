@@ -1,14 +1,17 @@
 1 
+modify the gencode of your GPU. My GPU is 2080ti, so gencode changed to the following:
 -gencode arch=compute_75,code=[sm_75,compute_75]
 
 
 2
+include some include files:
 /home/hs/software/caffe/include 
 /home/hs/software/caffe/.build_release/src
 /usr/include/openblas/
 
 
 3
+include some libs:
 /home/hs/software/caffe/.build_release/lib/libcaffe.so
 /usr/lib64/libglog.so
 /usr/lib64/libgflags.so
@@ -25,6 +28,7 @@ make
 
 6
 modify the following places of yolo_layer.cpp:
+
 height
 width
 classes
@@ -32,6 +36,8 @@ anchors
 
 7
 modify line 237 of detectnet.cpp as:
+2 is the total classes num of my dataset.
+
 for(j=0;j<2;++j){
 
 8
