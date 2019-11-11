@@ -24,16 +24,15 @@ cmake .. -DCUDA_PROPAGATE_HOST_FLAGS=OFF
 make
 
 6
-修改yolo_layer.cpp中以下点：
+modify the following places of yolo_layer.cpp:
 height
 width
 classes
 anchors
 
 7
-修改
-detectnet.cpp的237行为：
+modify line 237 of detectnet.cpp as:
 for(j=0;j<2;++j){
 
 8
-./x86_64/bin/detectnet 0 ../../pytorch-caffe-darknet-convert/yolov3.prototxt ../../pytorch-caffe-darknet-convert/yolov3.caffemodel 图片名称
+./x86_64/bin/detectnet 0 ../../pytorch-caffe-darknet-convert/yolov3.prototxt ../../pytorch-caffe-darknet-convert/yolov3.caffemodel pic_path
