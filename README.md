@@ -7,6 +7,12 @@ the repository is forked from https://github.com/ChenYingpeng/caffe-yolov3
 I have modified some places, you can reference the file of make_method_by_laymu.txt.
 thanks ChenYingpeng!
 
+# model convert
+you could refer the following repo for model convert.
+https://github.com/passion3394/pytorch-caffe-darknet-convert-laymu
+
+I have tested the yolov3_darknet2caffe.py, it should work.
+
 # Install
 git clone https://github.com/passion3394/darknet2caffe_yolov3
 
